@@ -1,0 +1,25 @@
+import Categories from '../../components/Categories/Categories';
+import DecorLine from '../../components/DecorLine/DecorLine';
+import MoviesList from '../../components/MoviesList/MoviesList';
+import Title from '../../components/Title/Title';
+
+import styles from './CinemaNow.module.scss';
+
+const CinemaNow = () => {
+  return (
+    <section className={styles['cinema-now']}>
+      <div className="container">
+        <div className={styles['cinema-now__inner']}>
+          <div className={styles['cinema-now__top']}>
+            <Title>Сейчас в кино</Title>
+            <DecorLine />
+            <Categories />
+          </div>
+          <MoviesList />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CinemaNow;
