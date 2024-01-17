@@ -1,0 +1,17 @@
+@import 'reset-css';
+@import 'normalize.css';
+
+:root {
+  --background-color: #1e2538;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--background-color);
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
