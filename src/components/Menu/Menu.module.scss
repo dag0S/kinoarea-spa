@@ -1,0 +1,12 @@
+.menu {
+  display: flex;
+  gap: 53px;
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: normal;
+    font-style: normal;
+  }
+}

@@ -1,0 +1,23 @@
+.header {
+  padding-top: 23px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    margin-bottom: 10px;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+} 
+
+.search-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
