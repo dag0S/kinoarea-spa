@@ -1,8 +1,12 @@
 import styles from './Socials.module.scss';
+import cn from 'classnames';
 
-const Socials = () => {
+const Socials = ({ isBig }) => {
   return (
-    <ul className={styles['socials']}>
+    <ul
+      className={cn(styles['socials'], {
+        [styles['bigIcons']]: isBig,
+      })}>
       <li>
         <a href="#">
           <img src="/svg/vk-icon.svg" alt="VK иконка" />

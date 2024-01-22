@@ -1,6 +1,15 @@
 .menu {
   display: flex;
-  gap: 53px;
+  gap: 33px;
+
+  li {
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
+
   a {
     text-decoration: none;
     color: var(--text-color);
@@ -8,5 +17,9 @@
     font-weight: 700;
     line-height: normal;
     font-style: normal;
+
+    display: inline-block;
+    padding: 10px;
+    
   }
 }

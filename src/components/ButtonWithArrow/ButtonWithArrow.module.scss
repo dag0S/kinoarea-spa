@@ -1,0 +1,13 @@
+.button {
+  color: var(--text-color);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  text-wrap: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 27px;
+}

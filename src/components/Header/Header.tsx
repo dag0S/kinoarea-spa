@@ -12,7 +12,7 @@ const Header = () => {
             <a className={styles['header__logo']} href="/">
               <img src="/svg/logo.svg" alt="Логотип Kinoarea" />
             </a>
-            <Socials />
+            <Socials isBig={false} />
           </div>
           <Menu />
           <div className={styles['buttons']}>

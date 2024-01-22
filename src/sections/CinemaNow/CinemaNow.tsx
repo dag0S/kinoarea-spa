@@ -16,6 +16,9 @@ const CinemaNow = () => {
             <Categories />
           </div>
           <MoviesList />
+          <a className={styles['cinema-now__btn']} href="/">
+            Все новинки
+          </a>
         </div>
       </div>
     </section>

@@ -1,11 +1,11 @@
-
 import CinemaNow from '../../sections/CinemaNow/CinemaNow';
-import styles from './Main.module.scss';
+import Trailers from '../../sections/Trailers/Trailers';
 
 const Main = () => {
   return (
     <main>
       <CinemaNow />
+      <Trailers />
     </main>
   );
 };

@@ -1,0 +1,38 @@
+.trailers {
+  padding-top: 55px;
+
+  &__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+}
+
+.trailer {
+  &__wrap-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__wrap-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  &__title {
+    color: var(--text-color);
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &__wrap-right {
+    display: flex;
+    gap: 8px;
+  }
+}

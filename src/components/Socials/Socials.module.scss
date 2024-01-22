@@ -4,5 +4,16 @@
 
   img {
     width: 12px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.bigIcons {
+  img {
+    width: 18px;
   }
 }
