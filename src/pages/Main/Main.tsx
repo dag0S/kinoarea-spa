@@ -1,4 +1,5 @@
 import CinemaNow from '../../sections/CinemaNow/CinemaNow';
+import PopularFilms from '../../sections/PopularFilms/PopularFilms';
 import Trailers from '../../sections/Trailers/Trailers';
 
 const Main = () => {
@@ -6,6 +7,7 @@ const Main = () => {
     <main>
       <CinemaNow />
       <Trailers />
+      <PopularFilms />
     </main>
   );
 };

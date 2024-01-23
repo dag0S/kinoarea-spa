@@ -1,0 +1,9 @@
+.popular-films {
+  padding-top: 80px;
+  &__top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
