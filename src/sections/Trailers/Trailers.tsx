@@ -19,12 +19,22 @@ const Trailers = () => {
             <div className={styles['trailer__wrap-description']}>
               <div className={styles['trailer__wrap-left']}>
                 <h4 className={styles['trailer__title']}>Форсаж 9</h4>
-                <Socials isBig={false} />
+                <Socials isBig={true} />
               </div>
               <div className={styles['trailer__wrap-right']}>
                 <ButtonRate rate="like" />
                 <ButtonRate rate="dislike" />
               </div>
+            </div>
+          </div>
+          <div className={styles['scroll-line']}>
+            <div className={styles['scroll-line__wrap']}>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                <div className={styles['preview-trailer']} key={item}>
+                  <div className={styles['preview-trailer__img']}></div>
+                  <h4 className={styles['preview-trailer__title']}>Мулан</h4>
+                </div>
+              ))}
             </div>
           </div>
         </div>

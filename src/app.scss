@@ -3,9 +3,10 @@
 
 :root {
   --background-color: #1e2538;
-  --background-secondary-color: #151A26;
+  --background-secondary-color: #151a26;
   --text-color: #fff;
   --accent-color: #f2f60f;
+  --test-color: #a1a1a1;
 }
 
 body {
@@ -17,4 +18,18 @@ body {
   max-width: 1450px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #1b2133;
+}
+::-webkit-scrollbar-thumb {
+  background: #3657cb;
+  border-radius: 10px;
 }
