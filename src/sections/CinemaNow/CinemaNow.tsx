@@ -19,20 +19,23 @@ const categoriesList = [
 const CinemaNow = () => {
   const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      headers: { accept: 'application/json', 'X-API-KEY': 'HC8S314-K8XMMYQ-NCWJB2M-HZCM394' },
-    };
-    fetch(
-      'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
-      options,
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.docs);
-      });
-  }, []);
+  // HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
+  // HC8S314-K8XMMYQ-NCWJB2M-HZCM394
+
+  // useEffect(() => {
+  //   const options = {
+  //     method: 'GET',
+  //     headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
+  //   };
+  //   fetch(
+  //     'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
+  //     options,
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setMovies(data.docs);
+  //     });
+  // }, []);
 
   return (
     <section className={styles['cinema-now']}>
@@ -44,7 +47,7 @@ const CinemaNow = () => {
             <Categories list={categoriesList} />
           </div>
           <div className={styles['movies']}>
-            {movies.map(({ name, genres, rating, poster, id }) => (
+            {false && movies.map(({ name, genres, rating, poster, id }) => (
               <MovieItem name={name} genres={genres} poster={poster} rating={rating} key={id} />
             ))}
           </div>

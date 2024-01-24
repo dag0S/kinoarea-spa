@@ -1,0 +1,23 @@
+.slider {
+  &__bottom-wrap {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 55px;
+  }
+
+  &__btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__pagination {
+    color: var(--text-color);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: auto;
+  }
+}
