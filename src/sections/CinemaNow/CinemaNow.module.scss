@@ -31,3 +31,11 @@
     max-width: 200px;
   }
 }
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 33px 22px;
+  justify-items: center;
+  margin-bottom: 50px;
+}

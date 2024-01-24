@@ -1,9 +1,9 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
+import 'swiper/css';
 import MovieItem from '../MovieItem/MovieItem';
 
-import styles from './MoviesList.module.scss';
-
-const MoviesList = () => {
+const Slider = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -22,12 +22,20 @@ const MoviesList = () => {
   }, []);
 
   return (
-    <div className={styles['movies']}>
-      {movies.map(({ name, genres, rating, poster, id }) => (
-        <MovieItem name={name} genres={genres} poster={poster} rating={rating} key={id} />
-      ))}
+    <div>
+      <Swiper
+        spaceBetween={22}
+        slidesPerView={4}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}>
+        {movies.map(({ name, genres, rating, poster, id }) => (
+          <SwiperSlide>
+            <MovieItem name={name} genres={genres} poster={poster} rating={rating} key={id} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
 
-export default MoviesList;
+export default Slider;
