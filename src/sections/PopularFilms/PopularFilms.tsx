@@ -7,8 +7,6 @@ import styles from './PopularFilms.module.scss';
 const categoriesList = ['Всё время', '2020', '2019', '2018', '2017', '2016', '2015'];
 
 const PopularFilms = () => {
-
-
   return (
     <section className={styles['popular-films']}>
       <div className="container">
