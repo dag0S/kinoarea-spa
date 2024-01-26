@@ -1,0 +1,129 @@
+.popular-people-list {
+  display: flex;
+  gap: 22px;
+
+  &__top-2 {
+    display: flex;
+    gap: 22px;
+  }
+}
+
+.popular-people-card {
+  position: relative;
+  display: inline-block;
+
+  &__img {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    width: 444px;
+    height: 444px;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 55.56%);
+  }
+
+  &__rating {
+    color: var(--accent-color);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+
+    position: absolute;
+    top: 12px;
+    left: 16px;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+  }
+
+  &__ru-name {
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 6px;
+  }
+
+  &__en-name {
+    opacity: 0.35;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 9px;
+  }
+
+  &__age {
+    color: var(--accent-color);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+  }
+}
+
+.scroll-list {
+  border-radius: 10px;
+  background: var(--background-ternary-color);
+  width: 500px;
+  height: 444px;
+  padding: 0 30px;
+  overflow-y: auto;
+
+  &__item {
+    border-bottom: 2px solid var(--background-color);
+    padding: 22px 0;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__item-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-ru-name {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__item-en-name {
+    opacity: 0.35;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__item-age {
+    color: var(--accent-color);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+  }
+
+  &__item-rating {
+    color: var(--accent-color);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
