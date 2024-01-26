@@ -1,0 +1,17 @@
+@import './vars';
+@import './reset';
+@import './base';
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #1b2133;
+}
+::-webkit-scrollbar-thumb {
+  background: #3657cb;
+  border-radius: 10px;
+}
