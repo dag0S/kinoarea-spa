@@ -3,8 +3,9 @@ import Footer from './components/Footer/Footer';
 
 import Header from './components/Header/Header';
 import Main from './pages/Main/Main';
+import { FC } from 'react';
 
-function App() {
+const App: FC = () => {
   return (
     <>
       <Header />

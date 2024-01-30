@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import cn from 'classnames';
@@ -6,30 +6,37 @@ import cn from 'classnames';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import styles from './Slider.module.scss';
 
 import MovieItem from '../MovieItem/MovieItem';
+import axios from 'axios';
+import { IMovie } from '../../types/types';
 
-const Slider = () => {
-  const [movies, setMovies] = useState([]);
+// HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
+// HC8S314-K8XMMYQ-NCWJB2M-HZCM394
 
-  // HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
-  // HC8S314-K8XMMYQ-NCWJB2M-HZCM394
+const options = {
+  method: 'GET',
+  headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
+};
+
+const Slider: FC = () => {
+  const [movies, setMovies] = useState<IMovie[]>([]);
+
+  // const fetchMovies = async () => {
+  //   try {
+  //     const { data } = await axios.get(
+  //       'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
+  //       options,
+  //     );
+  //     setMovies(data.docs);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   // useEffect(() => {
-  //   const options = {
-  //     method: 'GET',
-  //     headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
-  //   };
-  //   fetch(
-  //     'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
-  //     options,
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setMovies(data.docs);
-  //     });
+  //   fetchMovies();
   // }, []);
 
   return (
@@ -50,11 +57,12 @@ const Slider = () => {
         }}
         loop={true}
         modules={[Pagination, Navigation, Autoplay]}>
-        {false &&movies.map(({ name, genres, rating, poster, id }) => (
-          <SwiperSlide key={id}>
-            <MovieItem name={name} genres={genres} poster={poster} rating={rating} />
-          </SwiperSlide>
-        ))}
+        {movies.length > 0 &&
+          movies.map(({ name, genres, rating, poster, id }) => (
+            <SwiperSlide key={id}>
+              <MovieItem name={name} genres={genres} poster={poster} rating={rating} />
+            </SwiperSlide>
+          ))}
       </Swiper>
       <div className={styles['slider__bottom-wrap']}>
         <button className={cn(styles['slider__prev'], styles['slider__btn'])} id="prevBtn">

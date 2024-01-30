@@ -3,6 +3,7 @@ import Button from '../Button/Button';
 import Menu from '../Menu/Menu';
 import Socials from '../Socials/Socials';
 import styles from './Header.module.scss';
+import { SocialsVariant } from '../Socials/SocialsProps';
 
 const Header: FC = () => {
   return (
@@ -13,7 +14,7 @@ const Header: FC = () => {
             <a className={styles['header__logo']} href="/">
               <img src="/svg/logo.svg" alt="Логотип Kinoarea" />
             </a>
-            <Socials isBig={false} />
+            <Socials size={SocialsVariant.small} />
           </div>
           <Menu />
           <div className={styles['buttons']}>

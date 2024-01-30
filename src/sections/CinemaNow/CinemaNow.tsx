@@ -1,12 +1,22 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import Categories from '../../components/Categories/Categories';
 import DecorLine from '../../components/DecorLine/DecorLine';
 import Title from '../../components/Title/Title';
 import MovieItem from '../../components/MovieItem/MovieItem';
 
 import styles from './CinemaNow.module.scss';
+import axios from 'axios';
+import { IMovie } from '../../types/types';
 
-const categoriesList = [
+// HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
+// HC8S314-K8XMMYQ-NCWJB2M-HZCM394
+
+const options = {
+  method: 'GET',
+  headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
+};
+
+const categoriesList: string[] = [
   'Все',
   'Боевики',
   'Приключения',
@@ -16,27 +26,24 @@ const categoriesList = [
   'Драма',
 ];
 
-const CinemaNow = () => {
-  const [movies, setMovies] = useState([]);
+const CinemaNow: FC = () => {
+  const [movies, setMovies] = useState<IMovie[]>([]);
 
-  // HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
-  // HC8S314-K8XMMYQ-NCWJB2M-HZCM394
+  // const fetchMovies = async () => {
+  //   try {
+  //     const { data } = await axios.get(
+  //       'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
+  //       options,
+  //     );
+  //     setMovies(data.docs);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
-    };
-    fetch(
-      'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
-      options,
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.docs);
-        console.log(data.docs[0]);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetchMovies();
+  // }, []);
 
   return (
     <section className={styles['cinema-now']}>
@@ -48,9 +55,10 @@ const CinemaNow = () => {
             <Categories list={categoriesList} />
           </div>
           <div className={styles['movies']}>
-            {movies.map(({ name, genres, rating, poster, id }) => (
-              <MovieItem name={name} genres={genres} poster={poster} rating={rating} key={id} />
-            ))}
+            {movies.length > 0 &&
+              movies.map(({ name, genres, rating, poster, id }) => (
+                <MovieItem name={name} genres={genres} poster={poster} rating={rating} key={id} />
+              ))}
           </div>
           <a className={styles['cinema-now__btn']} href="/">
             Все новинки

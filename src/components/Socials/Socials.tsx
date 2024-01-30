@@ -1,11 +1,13 @@
+import { FC } from 'react';
 import styles from './Socials.module.scss';
 import cn from 'classnames';
+import { SocialsProps, SocialsVariant } from './SocialsProps';
 
-const Socials = ({ isBig }) => {
+const Socials: FC<SocialsProps> = ({ size }) => {
   return (
     <ul
       className={cn(styles['socials'], {
-        [styles['bigIcons']]: isBig,
+        [styles['bigIcons']]: size === SocialsVariant.big,
       })}>
       <li>
         <a href="#">

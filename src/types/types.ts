@@ -18,3 +18,20 @@ export interface IRating {
   kp: number;
   russianFilmCritics?: number;
 }
+
+export interface IPeople {
+  age: number;
+  enName: string;
+  id: number;
+  name: string;
+  photo: string;
+  sex: string;
+}
+
+export interface IMovie {
+  genres: IGenres[];
+  id: number;
+  name: string;
+  poster: IPoster;
+  rating: IRating;
+}

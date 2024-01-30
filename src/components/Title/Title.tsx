@@ -1,6 +1,8 @@
+import { FC } from 'react';
 import styles from './Title.module.scss';
+import { TitleProps } from './TitleProps';
 
-const Title = ({ children }) => {
+const Title: FC<TitleProps> = ({ children }) => {
   return <h2 className={styles['title']}>{children}</h2>;
 };
 

@@ -3,10 +3,11 @@ import styles from './PopularPeople.module.scss';
 import Categories from '../../components/Categories/Categories';
 import Title from '../../components/Title/Title';
 import PopularPeopleList from '../../components/PopularPeopleList/PopularPeopleList';
+import { FC } from 'react';
 
-const dateList = ['За год', 'За месяц', 'За неделю'];
+const dateList: string[] = ['За год', 'За месяц', 'За неделю'];
 
-const PopularPeople = () => {
+const PopularPeople: FC = () => {
   return (
     <section className={styles['popular-people']}>
       <div className="container">

@@ -4,8 +4,11 @@ import ButtonWithArrow from '../../components/ButtonWithArrow/ButtonWithArrow';
 import Socials from '../../components/Socials/Socials';
 import Title from '../../components/Title/Title';
 import ButtonRate from '../../components/ButtonRate/ButtonRate';
+import { SocialsVariant } from '../../components/Socials/SocialsProps';
+import { ButtonVariant } from '../../components/ButtonRate/ButtonRateProps';
+import { FC } from 'react';
 
-const Trailers = () => {
+const Trailers: FC = () => {
   return (
     <section className={styles['trailers']}>
       <div className="container">
@@ -19,11 +22,11 @@ const Trailers = () => {
             <div className={styles['trailer__wrap-description']}>
               <div className={styles['trailer__wrap-left']}>
                 <h4 className={styles['trailer__title']}>Форсаж 9</h4>
-                <Socials isBig={true} />
+                <Socials size={SocialsVariant.big} />
               </div>
               <div className={styles['trailer__wrap-right']}>
-                <ButtonRate rate="like" />
-                <ButtonRate rate="dislike" />
+                <ButtonRate rate={ButtonVariant.like} />
+                <ButtonRate rate={ButtonVariant.dislike} />
               </div>
             </div>
           </div>
