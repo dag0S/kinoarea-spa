@@ -3,8 +3,9 @@ import cn from 'classnames';
 
 import Menu from '../Menu/Menu';
 import Socials from '../Socials/Socials';
+import { FC } from 'react';
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className={styles['footer']}>
       <div className="container">

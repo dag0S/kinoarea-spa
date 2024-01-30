@@ -1,6 +1,8 @@
+import { FC } from 'react';
 import styles from './MovieItem.module.scss';
+import { MovieItemProps } from './MovieItemProps';
 
-const MovieItem = ({ name, genres, rating, poster }) => {
+const MovieItem: FC<MovieItemProps> = ({ name, genres, rating, poster }) => {
   return (
     <div className={styles['movie']}>
       <div className={styles['movie__img']} style={{ backgroundImage: `url(${poster.url})` }}>
@@ -13,8 +15,8 @@ const MovieItem = ({ name, genres, rating, poster }) => {
       </div>
       <h3 className={styles['movie__title']}>{name}</h3>
       <p className={styles['movie__genres']}>
-        {genres.map((gener, index) =>
-          genres.length === index + 1 ? gener.name : `${gener.name}, `,
+        {genres.map((genre, index) =>
+          genres.length === index + 1 ? genre.name : `${genre.name}, `,
         )}
       </p>
     </div>

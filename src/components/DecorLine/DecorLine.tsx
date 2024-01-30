@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from './DecorLine.module.scss';
 
-const DecorLine = () => {
+const DecorLine: FC = () => {
   return <div className={styles['line']} />;
 };
 

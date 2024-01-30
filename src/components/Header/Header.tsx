@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import Button from '../Button/Button';
 import Menu from '../Menu/Menu';
 import Socials from '../Socials/Socials';
 import styles from './Header.module.scss';
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className={styles['header']}>
       <div className="container">

@@ -1,79 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './PopularPeopleList.module.scss';
 
-const testList = [
-  {
-    id: 1,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 2,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 3,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 4,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 5,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 6,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 7,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 8,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 9,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-  {
-    id: 10,
-    nameRu: 'Квентин Тарантино',
-    nameEn: 'Quentin Tarantino',
-    age: 57,
-    imgPath: '/public/img/demo/popular-people.png',
-  },
-];
-
 const PopularPeopleList = () => {
   const [data, setData] = useState([]);
 
@@ -86,8 +13,10 @@ const PopularPeopleList = () => {
       headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
     };
 
+    // 'https://api.kinopoisk.dev/v1.4/person?page=1&limit=10&notNullFields=name&notNullFields=enName&notNullFields=photo&notNullFields=age&sortField=movies.rating&sortType=1&movies.rating=6-10&sortField=updatedAt&sortType=-1&updatedAt=26.01.2022-26.01.2024'
+
     fetch(
-      'https://api.kinopoisk.dev/v1.4/person?page=1&limit=10&notNullFields=name&notNullFields=enName&notNullFields=photo&notNullFields=age&sortField=movies.rating&sortType=1&movies.rating=6-10&sortField=updatedAt&sortType=-1&updatedAt=26.01.2022-26.01.2024',
+      'https://api.kinopoisk.dev/v1.4/person?page=1&limit=10&notNullFields=name&notNullFields=enName&notNullFields=photo&notNullFields=age',
       options,
     )
       .then((response) => response.json())

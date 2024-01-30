@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import styles from './ButtonRate.module.scss';
+import { ButtonRateProps } from './ButtonRateProps';
 
-const ButtonRate = ({ rate }) => {
+const ButtonRate: FC<ButtonRateProps> = ({ rate }) => {
   const rates = { like: '/svg/like.svg', dislike: '/svg/dislike.svg' };
-
-  const [count, setCount] = useState(Math.trunc(Math.random() * 1000));
+  const [count, setCount] = useState<number>(Math.trunc(Math.random() * 1000));
 
   return (
     <div className={styles['rating']}>

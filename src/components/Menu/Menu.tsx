@@ -1,6 +1,8 @@
+import { FC } from 'react';
 import styles from './Menu.module.scss';
+import { IMenu } from '../../types/types';
 
-const menu = [
+const menu: IMenu[] = [
   {
     name: 'Афиша',
     path: '/',
@@ -31,10 +33,10 @@ const menu = [
   },
 ];
 
-const Menu = () => {
+const Menu: FC = () => {
   return (
     <ul className={styles['menu']}>
-      {menu.map(({name, path}, index) => (
+      {menu.map(({ name, path }, index) => (
         <li key={index}>
           <a href={path}>{name}</a>
         </li>

@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import styles from './Categories.module.scss';
+import { CategoriesProps } from './CategoriesProps';
 
-const Categories = ({ list }) => {
-  const [activeItem, setActiveItem] = useState(0);
+const Categories: FC<CategoriesProps> = ({ list }) => {
+  const [activeItem, setActiveItem] = useState<number>(0);
   return (
     <ul className={styles['categories']}>
       {list.map((category, index) => (
