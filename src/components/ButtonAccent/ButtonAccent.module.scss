@@ -1,0 +1,19 @@
+.button-accent {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--background-secondary-color);
+
+  border-radius: 10px;
+  background: var(--accent-color);
+  transition: opacity 0.3s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 37px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

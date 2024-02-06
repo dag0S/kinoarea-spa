@@ -1,0 +1,123 @@
+.newsletter {
+  background: var(--background-secondary-color);
+
+  &__inner {
+    background: url('/img/newsletter-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 0 0 2000px rgba(29, 58, 160, 0.9);
+    border-radius: 10px;
+  }
+
+  &__wrap {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 76px;
+    padding-bottom: 106px;
+  }
+
+  &__logo {
+    margin-bottom: 53px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 42px;
+    color: var(--text-color);
+    margin-bottom: 26px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 34px;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  &__input {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.665;
+    color: var(--background-color);
+    padding: 22px 27px;
+    border-radius: 10px;
+    background: var(--text-color);
+    width: 100%;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.665;
+      color: var(--background-color);
+      opacity: 0.6;
+    }
+  }
+
+  &__policy {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--text-color);
+    cursor: pointer;
+    a {
+      color: var(--accent-color);
+      text-decoration: underline;
+      transition: opacity 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__checkbox {
+    & + label {
+      position: relative;
+      padding-left: 30px;
+      height: 17px;
+      display: flex;
+      align-items: center;
+      color: #000;
+      cursor: pointer;
+      user-select: none;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 17px;
+        height: 17px;
+        border: 1px solid var(--accent-color);
+        border-radius: 2px;
+      }
+    }
+    &:checked + label::before {
+      background-image: url('/svg/checked.svg');
+      background-size: cover;
+      border: none;
+    }
+  }
+}

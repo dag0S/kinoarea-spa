@@ -1,0 +1,9 @@
+.expected-films {
+  background: var(--background-secondary-color);
+  padding-top: 50px;
+  padding-bottom: 105px;
+
+  &__top-wrap {
+    margin-bottom: 70px;
+  }
+}
