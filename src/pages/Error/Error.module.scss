@@ -1,0 +1,36 @@
+.error {
+  padding-top: 206px;
+  padding-bottom: 133px;
+
+  &__inner {
+    max-width: 715px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    color: var(--text-color);
+    span {
+      font-size: 150px;
+    }
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+}

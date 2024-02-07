@@ -1,0 +1,18 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  width: 72px;
+  height: 72px;
+  background: #100f14;
+
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+
+  &--hidden {
+    display: none;
+  }
+}

@@ -4,6 +4,7 @@ import Menu from '../Menu/Menu';
 import Socials from '../Socials/Socials';
 import styles from './Header.module.scss';
 import { SocialsVariant } from '../Socials/SocialsProps';
+import { Link } from 'react-router-dom';
 
 const Header: FC = () => {
   return (
@@ -11,9 +12,9 @@ const Header: FC = () => {
       <div className="container">
         <div className={styles['header__inner']}>
           <div>
-            <a className={styles['header__logo']} href="/">
+            <Link className={styles['header__logo']} to="/">
               <img src="/svg/logo.svg" alt="Логотип Kinoarea" />
-            </a>
+            </Link>
             <Socials size={SocialsVariant.small} />
           </div>
           <Menu />

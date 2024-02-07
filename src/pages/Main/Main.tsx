@@ -8,14 +8,14 @@ import ExpectedFilms from '../../sections/ExpectedFilms/ExpectedFilms';
 
 const Main: FC = () => {
   return (
-    <main>
+    <>
       <CinemaNow />
       <Trailers />
       <PopularFilms />
       <PopularPeople />
       <ExpectedFilms />
       <Newsletter />
-    </main>
+    </>
   );
 };
 

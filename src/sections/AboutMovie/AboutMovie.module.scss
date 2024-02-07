@@ -1,0 +1,56 @@
+.about-movie {
+  padding-top: 140px;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    max-width: 1163px;
+  }
+
+  &__top-wrap {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__poster {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+    width: 395px;
+    height: 539px;
+  }
+
+  &__info {
+    max-width: 705px;
+    padding-top: 31px;
+  }
+
+  &__breadcrumbs {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 3px;
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
+  &__alt-title {
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--text-color);
+    margin-bottom: 14px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+}
