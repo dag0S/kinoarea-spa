@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
 export interface ButtonProps {
-  children: ReactNode
+  children: ReactNode,
+  className?: string;
 }

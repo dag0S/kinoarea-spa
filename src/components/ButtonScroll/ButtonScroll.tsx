@@ -9,16 +9,16 @@ const ButtonScroll: FC = () => {
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     console.log(scrolled);
-    if (scrolled > 0) {
+    if (scrolled > 400) {
       setIsVisible(true);
-    } else if (scrolled <= 0) {
+    } else if (scrolled <= 400) {
       setIsVisible(false);
     }
   };
 
   const scrollToBottom = () => {
     window.scrollTo({
-      top: document.documentElement.scrollHeight,
+      top: 0,
       behavior: 'smooth',
     });
   };

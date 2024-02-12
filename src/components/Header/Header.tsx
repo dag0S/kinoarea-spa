@@ -20,9 +20,27 @@ const Header: FC = () => {
           <Menu />
           <div className={styles['buttons']}>
             <button className={styles['search-button']}>
-              <img src="/svg/search-icon.svg" alt="Поиск" />
+              <img src="/svg/lupa.svg" alt="Поиск" />
             </button>
             <Button>Войти</Button>
+          </div>
+        </div>
+
+        <div className={styles['header__inner-mobile']}>
+          <div className={styles['header__top-wrap']}>
+            <button className={styles['search-button']}>
+              <img src="/svg/lupa.svg" alt="Поиск" />
+            </button>
+            <div className={styles['header__wrap-logo']}>
+              <Link className={styles['header__logo']} to="/">
+                <img src="/svg/logo.svg" alt="Логотип Kinoarea" />
+              </Link>
+              <Socials size={SocialsVariant.small} />
+            </div>
+            <Button className={styles['header__btn-login']}>Войти</Button>
+          </div>
+          <div className={styles['header__bottom-wrap']}>
+            <Menu />
           </div>
         </div>
       </div>
