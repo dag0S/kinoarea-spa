@@ -4,4 +4,8 @@
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+
+  @media (max-width: 1300px) {
+    font-size: 40px;
+  }
 }

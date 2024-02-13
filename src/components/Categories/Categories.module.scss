@@ -1,6 +1,11 @@
 .categories {
   display: flex;
   gap: 42px;
+
+  @media (max-width: 1300px) {
+    gap: 30px;
+  }
+
   li {
     color: var(--text-color);
     opacity: 0.35;
@@ -13,6 +18,10 @@
 
     &.active {
       opacity: 1;
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 15px;
     }
   }
 }

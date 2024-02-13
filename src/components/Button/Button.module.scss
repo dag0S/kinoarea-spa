@@ -10,7 +10,12 @@
 
   border-radius: 10px;
   background: #3657cb;
-  box-shadow: 0px 0px 15px 0px rgba(72, 113, 255, 0.8);
+
+  transition: box-shadow 0.3s ease-out;
+
+  &:hover {
+    box-shadow: 0px 0px 15px 0px rgba(72, 113, 255, 0.8);
+  }
 
   @media (max-width: 1300px) {
     padding: 10px 30px;

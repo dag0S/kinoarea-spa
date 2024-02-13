@@ -1,6 +1,6 @@
 .movie {
-  width: 340px;
-  min-height: 520px;
+  width: 100%;
+  max-height: 520px;
   position: relative;
 
   &__img {
@@ -8,13 +8,16 @@
     background-position: center center;
     background-size: cover;
 
-    width: 340px;
-    height: 463px;
+    aspect-ratio: 202/275;
 
     position: relative;
 
     border-radius: 10px;
     margin-bottom: 10px;
+
+    @media (max-width: 1300px) {
+      margin-bottom: 3px;
+    }
   }
 
   &__rating {
@@ -31,6 +34,11 @@
     border-radius: 5px;
     background: #89cb36;
     padding: 5px 13px;
+
+    @media (max-width: 1300px) {
+      font-size: 12px;
+      padding: 4px 6px;
+    }
   }
 
   &__title {
@@ -40,6 +48,10 @@
     font-weight: 700;
     line-height: normal;
     margin-bottom: 4px;
+
+    @media (max-width: 1300px) {
+      font-size: 15px;
+    }
   }
 
   &__genres {
@@ -48,6 +60,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    @media (max-width: 1300px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -74,6 +89,7 @@
     font-weight: 700;
     line-height: 1.66;
     text-decoration: none;
+    white-space: nowrap;
 
     border-radius: 10px;
     background: var(--text-color);
@@ -82,12 +98,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 71px;
-    min-width: 224px;
+    padding: 20px 35px;
 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    transition: box-shadow 0.3s ease-out;
+
+    &:hover {
+      box-shadow: 0px 0px 25px 0px rgba(51, 95, 253, 0.8);
+    }
+
+    @media (max-width: 1100px) {
+      font-size: 14px;
+      padding: 13px 17px;
+    }
   }
 }

@@ -8,7 +8,6 @@ const ButtonScroll: FC = () => {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    console.log(scrolled);
     if (scrolled > 400) {
       setIsVisible(true);
     } else if (scrolled <= 400) {

@@ -31,19 +31,6 @@
     justify-self: center;
   }
 
-  &__logo {
-    display: inline-block;
-    margin-bottom: 10px;
-
-    @media (max-width: 1000px) {
-      margin-bottom: 5px;
-      img {
-        width: 94px;
-        height: 24px;
-      }
-    }
-  }
-
   &__inner-mobile {
     display: none;
 
@@ -63,11 +50,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   &__btn-login {
     justify-self: end;
     align-self: start;
+  }
+
+  &__wrap-btns {
+    display: flex;
+    gap: 4px;
   }
 }
 
@@ -87,6 +83,12 @@
   border-radius: 10px;
   cursor: pointer;
 
+  transition: box-shadow 0.3s ease-out;
+
+  &:hover {
+    box-shadow: 0px 0px 15px 0px rgba(72, 113, 255, 0.8);
+  }
+
   @media (max-width: 1000px) {
     width: 43px;
     height: 41px;
@@ -94,5 +96,32 @@
       width: 12px;
       height: 12px;
     }
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 5px;
+  }
+
+  @media (max-width: 600px) {
+    width: 28px;
+    height: 27px;
+    img {
+      width: 11px;
+      height: 11px;
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--text-color);
+    width: 28px;
+    height: 27px;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }

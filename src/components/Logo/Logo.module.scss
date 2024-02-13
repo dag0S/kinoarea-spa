@@ -1,0 +1,16 @@
+.logo {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 5px;
+    img {
+      width: 94px;
+      height: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 9px;
+  }
+}
