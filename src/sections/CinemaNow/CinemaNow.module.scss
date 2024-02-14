@@ -6,6 +6,10 @@
   background-size: 150%;
   background-position: center top;
 
+  @media (max-width: 600px) {
+    padding-top: 86px;
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -20,6 +24,13 @@
       justify-content: start;
 
       margin-bottom: 28px;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 21px;
     }
   }
 
@@ -49,6 +60,11 @@
     @media (max-width: 1150px) {
       padding: 16px 34px;
     }
+
+    @media (max-width: 768px) {
+      padding: 11px 32px;
+      font-size: 16px;
+    }
   }
 
   &__wrap-btn {
@@ -71,9 +87,16 @@
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px 13px;
   }
 
   @media (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hidden {
+  @media (max-width: 600px) {
+    display: none;
   }
 }

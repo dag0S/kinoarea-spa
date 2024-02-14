@@ -9,7 +9,7 @@ import MenuModal from '../MenuModal/MenuModal';
 import styles from './Header.module.scss';
 
 const Header: FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   return (
     <header className={styles['header']}>
@@ -37,7 +37,11 @@ const Header: FC = () => {
               <button className={styles['search-button']}>
                 <img src="/svg/lupa.svg" alt="Поиск" />
               </button>
-              {isVisible && <MenuModal onClick={() => setIsVisible(false)} />}
+              {isVisible && (
+                <MenuModal onClick={() => setIsVisible(false)}>
+                  <Menu />
+                </MenuModal>
+              )}
             </div>
             <div className={styles['header__wrap-logo']}>
               <Logo />

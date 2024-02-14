@@ -1,11 +1,13 @@
 import { FC, useState } from 'react';
-import styles from './Categories.module.scss';
 import { CategoriesProps } from './CategoriesProps';
+import cn from 'classnames';
 
-const Categories: FC<CategoriesProps> = ({ list }) => {
+import styles from './Categories.module.scss';
+
+const Categories: FC<CategoriesProps> = ({ list, className = '' }) => {
   const [activeItem, setActiveItem] = useState<number>(0);
   return (
-    <ul className={styles['categories']}>
+    <ul className={cn(styles['categories'], className)}>
       {list.map((category, index) => (
         <li
           key={index}

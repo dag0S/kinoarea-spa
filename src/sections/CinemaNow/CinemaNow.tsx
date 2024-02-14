@@ -3,10 +3,12 @@ import Categories from '../../components/Categories/Categories';
 import DecorLine from '../../components/DecorLine/DecorLine';
 import Title from '../../components/Title/Title';
 import MovieItem from '../../components/MovieItem/MovieItem';
-
-import styles from './CinemaNow.module.scss';
 import axios from 'axios';
 import { IMovie } from '../../types/types';
+import ButtonHamburger from '../../components/ButtonHamburger/ButtonHamburger';
+import MenuModal from '../../components/MenuModal/MenuModal';
+
+import styles from './CinemaNow.module.scss';
 
 // HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
 // HC8S314-K8XMMYQ-NCWJB2M-HZCM394
@@ -28,6 +30,7 @@ const categoriesList: string[] = [
 
 const CinemaNow: FC = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const fetchMovies = async () => {
     try {
@@ -51,8 +54,9 @@ const CinemaNow: FC = () => {
         <div className={styles['cinema-now__inner']}>
           <div className={styles['cinema-now__top']}>
             <Title>Сейчас в кино</Title>
+            <ButtonHamburger onClick={() => setIsVisible(true)} />
             <DecorLine />
-            <Categories list={categoriesList} />
+            <Categories list={categoriesList} className={styles['hidden']}/>
           </div>
           <div className={styles['movies']}>
             {movies.length > 0 &&
@@ -67,6 +71,11 @@ const CinemaNow: FC = () => {
           </div>
         </div>
       </div>
+      {isVisible && (
+        <MenuModal onClick={() => setIsVisible(false)}>
+          <Categories list={categoriesList} />
+        </MenuModal>
+      )}
     </section>
   );
 };
