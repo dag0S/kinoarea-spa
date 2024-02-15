@@ -29,7 +29,8 @@ const Trailers: FC = () => {
               <iframe
                 className={styles['trailer__video']}
                 src={`https://youtube.com/embed/${trailer.youtubeId}?autoplay=1&mute=1`}
-                allow="autoplay"></iframe>
+                allow="autoplay"
+              />
             ) : (
               <div
                 className={styles['trailer__preview']}
@@ -66,7 +67,6 @@ const Trailers: FC = () => {
                     }}>
                     <div className={styles['overlay']}>
                       <img
-                        className={styles['overlay__play']}
                         src="/public/svg/play.svg"
                         alt="play"
                       />

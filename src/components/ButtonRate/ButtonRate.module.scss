@@ -4,6 +4,14 @@
   gap: 8px;
   align-items: center;
 
+  @media (max-width: 1000px) {
+    gap: 4px;
+   }
+
+  @media (max-width: 768px) {
+   gap: 2px;
+  }
+
   &__btn {
     border-radius: 10px;
     background: #1b2133;
@@ -23,6 +31,16 @@
       transform: scale(0.9);
     }
 
+    @media (max-width: 1000px) {
+      width: 39px;
+      height: 39px;
+
+      svg {
+        height: 17px;
+        width: 17px;
+      }
+    }
+
     &--is-voted {
       path {
         fill: var(--accent-color);
@@ -36,5 +54,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media (max-width: 1000px) {
+      font-size: 11px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 9px;
+    }
   }
 }
