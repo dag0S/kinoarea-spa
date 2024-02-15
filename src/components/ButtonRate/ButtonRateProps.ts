@@ -4,5 +4,6 @@ export enum ButtonVariant {
 }
 
 export interface ButtonRateProps {
-  rate: ButtonVariant
+  rate: ButtonVariant;
+  amount: number;
 }

@@ -22,6 +22,12 @@
     &:active {
       transform: scale(0.9);
     }
+
+    &--is-voted {
+      path {
+        fill: var(--accent-color);
+      }
+    }
   }
 
   &__counter {

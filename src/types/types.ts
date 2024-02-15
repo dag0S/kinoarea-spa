@@ -35,3 +35,11 @@ export interface IMovie {
   poster: IPoster;
   rating: IRating;
 }
+
+export interface ITrailer {
+  id: number;
+  youtubeId?: string;
+  title: string;
+  likes: number;
+  dislikes: number;
+}

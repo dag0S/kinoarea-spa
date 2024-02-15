@@ -10,4 +10,24 @@
   display: inline-flex;
   align-items: center;
   gap: 27px;
+
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.45);
+    img {
+      transform: translateX(-5px);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+    gap: 14px;
+  } 
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
 }
