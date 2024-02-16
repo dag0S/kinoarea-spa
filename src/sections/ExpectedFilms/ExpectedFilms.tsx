@@ -12,7 +12,7 @@ const ExpectedFilms: FC = () => {
         <div className={styles['expected-films__top-wrap']}>
           <Title>Ожидаемые новинки</Title>
         </div>
-        <Slider />
+        {/* <Slider idSlider={2} /> */}
       </div>
     </section>
   );

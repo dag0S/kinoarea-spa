@@ -1,13 +1,48 @@
 .popular-people {
   padding-top: 65px;
 
+  @media (max-width: 1300px) {
+    padding-top: 34px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 21px;
+  }
+
+  @media (max-width: 600px) {
+    padding-top: 28px;
+  }
+
   &__top-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 65px;
+
+    @media (max-width: 1300px) {
+      flex-direction: column;
+      gap: 15px;
+      align-items: start;
+      justify-content: start;
+
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: 1000px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 23px;
+    }
   }
-
-
 }
 
+.hidden {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}

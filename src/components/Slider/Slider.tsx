@@ -2,15 +2,16 @@ import { FC, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import cn from 'classnames';
+import MovieItem from '../MovieItem/MovieItem';
+import axios from 'axios';
+import { IMovie } from '../../types/types';
+import { SliderProps } from './SliderProps';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import styles from './Slider.module.scss';
 
-import MovieItem from '../MovieItem/MovieItem';
-import axios from 'axios';
-import { IMovie } from '../../types/types';
+import styles from './Slider.module.scss';
 
 // HYF139P-VWFMMNV-KD6YZB6-RJWSQE2
 // HC8S314-K8XMMYQ-NCWJB2M-HZCM394
@@ -20,7 +21,7 @@ const options = {
   headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
 };
 
-const Slider: FC = () => {
+const Slider: FC<SliderProps> = ({ idSlider }) => {
   const [movies, setMovies] = useState<IMovie[]>([]);
 
   // const fetchMovies = async () => {
@@ -45,7 +46,7 @@ const Slider: FC = () => {
         spaceBetween={22}
         slidesPerView={4}
         pagination={{
-          el: '#pagination',
+          el: `#pagination-${idSlider}`,
           type: 'fraction',
         }}
         navigation={{
@@ -56,7 +57,25 @@ const Slider: FC = () => {
           delay: 5000,
         }}
         loop={true}
-        modules={[Pagination, Navigation, Autoplay]}>
+        modules={[Pagination, Navigation, Autoplay]}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          600: {
+            slidesPerView: 3,
+            spaceBetween: 14,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 14,
+          },
+          1000: {
+            slidesPerView: 4,
+            spaceBetween: 23,
+          },
+        }}>
         {movies.length > 0 &&
           movies.map(({ name, genres, rating, poster, id }) => (
             <SwiperSlide key={id}>
@@ -68,7 +87,7 @@ const Slider: FC = () => {
         <button className={cn(styles['slider__prev'], styles['slider__btn'])} id="prevBtn">
           <img src="/svg/slider-arrow-left.svg" alt="arrow left" />
         </button>
-        <div className={styles['slider__pagination']} id="pagination" />
+        <div className={styles['slider__pagination']} id={`pagination-${idSlider}`} />
         <button className={cn(styles['slider__next'], styles['slider__btn'])} id="nextBtn">
           <img src="/svg/slider-arrow-right.svg" alt="arrow right" />
         </button>
