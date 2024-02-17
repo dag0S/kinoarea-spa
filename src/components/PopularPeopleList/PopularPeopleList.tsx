@@ -9,7 +9,7 @@ import { IPeople } from '../../types/types';
 
 const options = {
   method: 'GET',
-  headers: { accept: 'application/json', 'X-API-KEY': 'HYF139P-VWFMMNV-KD6YZB6-RJWSQE2' },
+  headers: { accept: 'application/json', 'X-API-KEY': 'HC8S314-K8XMMYQ-NCWJB2M-HZCM394' },
 };
 
 const PopularPeopleList: FC = () => {
@@ -36,16 +36,20 @@ const PopularPeopleList: FC = () => {
       ? data.map((item, index) => {
           if (index < 2) {
             return (
-              <a className={styles['popular-people-card']} href="#" key={item.id}>
-                <div className={styles['popular-people-card__img']}>
-                  <div className={styles['popular-people-card__overlay']} />
-                  <img src={item.photo} alt={item.name} />
-                </div>
-                <p className={styles['popular-people-card__rating']}>{index + 1}-е место</p>
-                <div className={styles['popular-people-card__description']}>
-                  <h5 className={styles['popular-people-card__ru-name']}>{item.name}</h5>
-                  <p className={styles['popular-people-card__en-name']}>{item.enName}</p>
-                  <p className={styles['popular-people-card__age']}>{item.age} лет</p>
+              <a
+                className={styles['popular-people-card']}
+                href="#"
+                key={item.id}
+                style={{
+                  backgroundImage: `linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 55.56%), url(${item.photo})`,
+                }}>
+                <div className={styles['popular-people-card__inner']}>
+                  <p className={styles['popular-people-card__rating']}>{index + 1}-е место</p>
+                  <div className={styles['popular-people-card__description']}>
+                    <h5 className={styles['popular-people-card__ru-name']}>{item.name}</h5>
+                    <p className={styles['popular-people-card__en-name']}>{item.enName}</p>
+                    <p className={styles['popular-people-card__age']}>{item.age} лет</p>
+                  </div>
                 </div>
               </a>
             );
