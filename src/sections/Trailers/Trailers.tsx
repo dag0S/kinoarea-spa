@@ -38,7 +38,7 @@ const Trailers: FC = () => {
                   backgroundImage: `url(//img.youtube.com/vi/${trailer.youtubeId}/maxresdefault.jpg)`,
                 }}
                 onClick={() => setIsPlay(true)}>
-                <img className={styles['trailer__play']} src="/public/svg/play.svg" alt="play" />
+                <img className={styles['trailer__play']} src="/svg/play.svg" alt="play" />
               </div>
             )}
             <div className={styles['trailer__wrap-description']}>
@@ -66,10 +66,7 @@ const Trailers: FC = () => {
                       setIsPlay(false);
                     }}>
                     <div className={styles['overlay']}>
-                      <img
-                        src="/public/svg/play.svg"
-                        alt="play"
-                      />
+                      <img src="/svg/play.svg" alt="play" />
                     </div>
                   </div>
                   <h4 className={styles['preview-trailer__title']}>{trailer.title}</h4>

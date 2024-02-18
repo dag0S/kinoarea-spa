@@ -6,7 +6,7 @@ import styles from './ButtonHamburger.module.scss';
 const ButtonHamburger: FC<ButtonHamburgerProps> = ({ onClick }) => {
   return (
     <button className={styles['btn']} onClick={onClick}>
-      <img src="/public/svg/hamburger-categories.svg" alt="категории" />
+      <img src="/svg/hamburger-categories.svg" alt="категории" />
     </button>
   );
 };

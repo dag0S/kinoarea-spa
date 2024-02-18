@@ -14,7 +14,7 @@ const MenuModal: FC<MenuModalProps> = ({ onClick, children }) => {
         </div>
         {children}
         <button className={styles['modal__close']} onClick={onClick}>
-          <img src="/public/svg/close-modal.svg" alt="close" />
+          <img src="/svg/close-modal.svg" alt="close" />
         </button>
       </div>
     </div>
