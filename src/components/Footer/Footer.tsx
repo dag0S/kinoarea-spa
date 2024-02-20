@@ -13,7 +13,7 @@ const Footer: FC = () => {
         <div className={styles['footer__inner']}>
           <Socials size={SocialsVariant.big} />
           <Menu />
-          <p className={styles['footer__text']}>2020 © Kinoarea. Все права защищены</p>
+          <p className={styles['footer__text']}>2024 © Kinoarea. Все права защищены</p>
           <a className={cn(styles['footer__text'], styles['footer__text--underline'])} href="#">
             Политика конфиденциальности
           </a>
