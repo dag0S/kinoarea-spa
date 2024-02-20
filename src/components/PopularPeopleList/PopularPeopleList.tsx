@@ -15,21 +15,21 @@ const options = {
 const PopularPeopleList: FC = () => {
   const [data, setData] = useState<IPeople[]>([]);
 
-  const fetchPeople = async () => {
-    try {
-      const { data } = await axios.get(
-        'https://api.kinopoisk.dev/v1.4/person?page=1&limit=10&selectFields=id&selectFields=name&selectFields=enName&selectFields=photo&selectFields=sex&selectFields=age&sortField=id&sortType=1&movies.enProfession=actor&movies.enProfession=director',
-        options,
-      );
-      setData(data.docs);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const fetchPeople = async () => {
+  //   try {
+  //     const { data } = await axios.get(
+  //       'https://api.kinopoisk.dev/v1.4/person?page=1&limit=10&selectFields=id&selectFields=name&selectFields=enName&selectFields=photo&selectFields=sex&selectFields=age&sortField=id&sortType=1&movies.enProfession=actor&movies.enProfession=director',
+  //       options,
+  //     );
+  //     setData(data.docs);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchPeople();
-  }, []);
+  // useEffect(() => {
+  //   fetchPeople();
+  // }, []);
 
   const peopleList =
     data.length > 0

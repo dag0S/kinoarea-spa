@@ -32,21 +32,21 @@ const CinemaNow: FC = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  const fetchMovies = async () => {
-    try {
-      const { data } = await axios.get(
-        'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
-        options,
-      );
-      setMovies(data.docs);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const fetchMovies = async () => {
+  //   try {
+  //     const { data } = await axios.get(
+  //       'https://api.kinopoisk.dev/v1.4/movie?page=1&limit=8&selectFields=id&selectFields=name&selectFields=rating&selectFields=genres&selectFields=poster&selectFields=videos&type=anime&year=2022-2024',
+  //       options,
+  //     );
+  //     setMovies(data.docs);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchMovies();
-  }, []);
+  // useEffect(() => {
+  //   fetchMovies();
+  // }, []);
 
   return (
     <section className={styles['cinema-now']}>
