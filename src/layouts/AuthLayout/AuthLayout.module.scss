@@ -12,7 +12,7 @@
     top: -10%;
 
     background: linear-gradient(0deg, rgba(29, 58, 160, 0.7) 0%, rgba(0, 0, 0, 0) 57.82%),
-      url('/img/auth-bg.jpg');
+      url('/img/auth-bg-hero.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -25,6 +25,11 @@
     width: 45%;
     overflow: hidden;
     border-right: 2px solid #3657cb;
+    background: linear-gradient(0deg, rgba(29, 58, 160, 0.7) 0%, rgba(0, 0, 0, 0) 57.82%),
+      url('/img/auth-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   &__right {
