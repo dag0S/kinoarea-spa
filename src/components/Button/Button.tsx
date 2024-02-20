@@ -8,7 +8,7 @@ import styles from './Button.module.scss';
 const Button: FC<ButtonProps> = ({ children, className = '' }) => {
   return (
     <Link
-      to="/"
+      to="/auth"
       className={cn(styles['button'], {
         [className]: className,
       })}>
