@@ -20,9 +20,9 @@ const Auth: FC = () => {
           <Input name="login" type="text" placeholder="Логин, почта или телефон" />
           <Input name="password" type="password" placeholder="Ваш пароль" />
           <ButtonAccent>Войти</ButtonAccent>
-          <ButtonAuth path="/registration">Зарегистрироваться</ButtonAuth>
+          <ButtonAuth path="/auth/registration">Зарегистрироваться</ButtonAuth>
         </Form>
-        <Link to="/restore" className={styles['auth__restore']}>
+        <Link to="/auth/restore" className={styles['auth__restore']}>
           Восстановить пароль
         </Link>
         <Socials size={SocialsVariant.big} />

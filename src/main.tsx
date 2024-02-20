@@ -6,8 +6,10 @@ import Main from './pages/Main/Main';
 import MoviePage from './pages/MoviePage/MoviePage';
 import AuthLayout from './layouts/AuthLayout/AuthLayout';
 import Auth from './pages/Auth/Auth';
+import Restore from './pages/Restore/Restore';
 
 import './scss/main.scss';
+import Registration from './pages/Registration/Registration';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: '/auth',
         element: <Auth />,
+      },
+      {
+        path: '/auth/restore',
+        element: <Restore />,
+      },
+      {
+        path: '/auth/registration',
+        element: <Registration />,
       },
     ],
   },
