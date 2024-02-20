@@ -1,17 +1,30 @@
 .layout {
   display: flex;
   align-items: center;
-  max-height: 100vh;
+  min-height: 100vh;
 
-  &__left {
-    height: 100vh;
-    width: 45%;
+  &__img {
+    height: 115%;
+    width: 115%;
+
+    position: absolute;
+    left: -10%;
+    top: -10%;
 
     background: linear-gradient(0deg, rgba(29, 58, 160, 0.7) 0%, rgba(0, 0, 0, 0) 57.82%),
       url('/img/auth-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
+  }
+
+  &__left {
+    position: relative;
+    min-height: 100vh;
+    align-self: stretch;
+    width: 45%;
+    overflow: hidden;
+    border-right: 2px solid #3657cb;
   }
 
   &__right {
@@ -22,8 +35,8 @@
   }
 
   &__logo {
-    padding-top: 38px;
-    padding-left: 51px;
+    position: absolute;
+    top: 51px;
+    left: 38px;
   }
 }
-
