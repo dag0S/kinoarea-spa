@@ -7,9 +7,11 @@ import Logo from '../Logo/Logo';
 import MenuModal from '../MenuModal/MenuModal';
 
 import styles from './Header.module.scss';
+import Search from '../Search/Search';
 
 const Header: FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isSearch, setIsSearch] = useState<boolean>(false);
 
   return (
     <header className={styles['header']}>
@@ -21,7 +23,7 @@ const Header: FC = () => {
           </div>
           <Menu />
           <div className={styles['buttons']}>
-            <button className={styles['search-button']}>
+            <button className={styles['search-button']} onClick={() => setIsSearch(true)}>
               <img src="/svg/lupa.svg" alt="Поиск" />
             </button>
             <Button>Войти</Button>
@@ -34,7 +36,7 @@ const Header: FC = () => {
               <button className={styles['menu-button']} onClick={() => setIsVisible(true)}>
                 <img src="/svg/hamburger.svg" alt="Меню" />
               </button>
-              <button className={styles['search-button']}>
+              <button className={styles['search-button']} onClick={() => setIsSearch(true)}>
                 <img src="/svg/lupa.svg" alt="Поиск" />
               </button>
               {isVisible && (
@@ -53,6 +55,12 @@ const Header: FC = () => {
             <Menu />
           </div>
         </div>
+
+        {isSearch && (
+          <MenuModal className={styles['visible']} onClick={() => setIsSearch(false)}>
+            <Search onClick={() => setIsSearch(false)} />
+          </MenuModal>
+        )}
       </div>
     </header>
   );

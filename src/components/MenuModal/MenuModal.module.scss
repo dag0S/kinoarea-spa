@@ -1,33 +1,35 @@
 .modal {
   display: none;
+  
+  animation: fade 0.2s ease-in-out;
+  display: block;
+  background: var(--background-opacity-color);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  &__inner {
+    padding-top: 32px;
+    position: relative;
+  }
+
+  &__utils {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+  }
 
   @media (max-width: 600px) {
-    animation: fade 0.2s ease-in-out;
     display: block;
-    background: var(--background-opacity-color);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-
-    &__inner {
-      padding-top: 32px;
-      position: relative;
-    }
-
-    &__utils {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 16px;
-    }
-
-    &__close {
-      position: absolute;
-      top: 40px;
-      right: 10px;
-    }
   }
 }
 
