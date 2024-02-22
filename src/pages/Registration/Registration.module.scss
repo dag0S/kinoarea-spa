@@ -1,5 +1,9 @@
 .registration {
   &__title {
     margin-bottom: 34px;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 20px;
+    }
   }
 }

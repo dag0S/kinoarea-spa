@@ -3,6 +3,10 @@
   align-items: center;
   min-height: 100vh;
 
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
   &__img {
     height: 115%;
     width: 115%;
@@ -30,6 +34,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @media (max-width: 1000px) {
+      width: 40%;
+    }
+
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 
   &__right {
@@ -37,11 +49,29 @@
     background: var(--background-secondary-color);
     border-radius: 10px;
     padding: 40px;
+
+    @media (max-width: 1000px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 500px) {
+      padding: 20px 10px;
+    }
   }
 
-  &__logo {
+  &__left-logo {
     position: absolute;
     top: 51px;
     left: 38px;
+  }
+
+  &__right-logo {
+    display: none;
+
+    @media (max-width: 900px) {
+      display: block;
+      padding-top: 30px;
+      margin-bottom: 30px;
+    }
   }
 }

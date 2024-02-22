@@ -8,6 +8,10 @@
 
   &__title {
     margin-bottom: 34px;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__form {
@@ -24,7 +28,7 @@
     color: #3657cb;
     margin-bottom: 20px;
 
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 
     &:hover {
       opacity: 0.6;

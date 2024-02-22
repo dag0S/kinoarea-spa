@@ -10,8 +10,9 @@ const AuthLayout: FC = () => {
     <MouseParallaxContainer resetOnLeave className={styles['layout']}>
       <div className={styles['layout__left']}>
         <MouseParallaxChild factorX={0.005} factorY={0.005} className={styles['layout__img']} />
-        <Logo className={styles['layout__logo']} />
+        <Logo className={styles['layout__left-logo']} />
       </div>
+      <Logo className={styles['layout__right-logo']} />
       <div className={styles['layout__right']}>
         <Outlet />
       </div>
